@@ -1,0 +1,6 @@
+#!/usr/bin/env Rscript
+
+library(shiny) 
+
+runApp(appDir="/Users/me/Notebook",port=6984,host='127.0.0.1',quiet=TRUE)
+

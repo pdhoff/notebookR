@@ -1,0 +1,29 @@
+#!/usr/bin/env Rscript
+
+dtime<-date() 
+fname<-tempfile()
+
+ndate<-format(Sys.time(), "%Y-%m-%d") 
+ntime<-format(Sys.time(), "%H:%M:%S")
+
+nheader<-c(
+          "---",
+   paste0("date: ",ndate),
+   paste0("time: ",ntime),
+   paste0("title:"), 
+          "---") 
+
+tfile<-tempfile()
+
+cat(nheader,file=tfile,sep="\n") 
+
+system(paste("vi",tfile)) 
+
+cat("\nCommit (Y/n)? ")
+commit<-readLines("stdin",n=1) 
+
+jname<-paste0(ndate,"-",ntime,".md")
+
+if(commit!="n"){system(paste0("cp ",tfile," /Users/me/Notebook/",jname))} 
+
+
