@@ -5,7 +5,7 @@
 #### 
 #### Shiny app to render and serve a searchable webpage of Rmarkdown notes.
 ####
-#### How to:
+#### How to use:
 #### 1. Put this app in a directory, say `/Users/me/Notebook` 
 #### 2. Make a subdirectory `www`.
 #### 3. Make a subdirectory `content`.
